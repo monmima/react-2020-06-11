@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>test</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            button {
+                font-size: 10em;
+                padding: 3px;
+                margin: 15px;
+                min-height: 44px;
+                min-width: 44px;
+            }
+            .bandeau, .flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .bandeau > img {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: auto;
+                width: 100px;
+            }
+            .myDiv {
+                text-align: center;
+            }
+            .portrait {
+                height: auto;
+                margin: 5px;
+                transition: all 1s;
+                width: 200px;
+            }
+            .portrait:hover {
+                filter: brightness(1.5);
+                width: 220px;
+            }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--PAGE 1-->
+        <!--EXEMPLE DE BASE-->
+        <!--PAS BESOIN DE TOUT FAIRE EN REACT!-->
+        <h1 class="text-center">Page 1</h1>
+
+        <!--REACT-->
+        <div id="bandeau1" class="container"></div>
+        <!--FIN DU REACT-->
+
+        <div class="d-flex justify-content-center">
+            <figure>
+                <img src="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" alt="Portrait de personnage de Baldur's Gate" className="portrait" />
+                <figcaption class="text-center">test</figcaption>
+            </figure>
+        </div>
+
+        <!--REACT-->
+        <div id="bandeau2" class="container"></div>
+        <!--FIN DU REACT-->
+    
+        <!--TOUT LE RESTE-->
+        <div id="root" class="container">Avant injection</div>
+
+        <!--IMPORTATION REACT-->
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+        <!--IMPORTATION BOOTSTRAP-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script type="text/babel">
+
+            // COMPOSANTS
+
+            // LA HIÉRARCHIE DE LA PAGE; AVEC LES COMPOSANTS
+            class Main extends React.Component {
+                render() {
+                    return (
+                        <div className="myDiv">
+                            <h1>Page 2</h1>
+                            <Bandeau />
+                            <Bouton /> {/*bouton test*/}
+                            <ConteneurPortraits1 />
+                            <Bandeau />
+
+                            <h1>Page 3</h1>
+                            <Bandeau />
+                            <ConteneurPortraits2 />
+                            <Bandeau />
+
+                            <h1>Page 4</h1>
+                            <Bandeau />
+                            <PortraitImoen3 />
+                            <Bandeau />
+
+                            <h1>Page 5</h1>
+                            <Bandeau />
+                            <AppelImoen />
+                            <Bandeau />
+
+                            <h1>Page 6</h1>
+                            <Bandeau />
+                            <AppelMontaron />
+                            <AppelKhalid />
+                            <Bandeau />
+
+                            <h1>Page 7</h1>
+                            <Bandeau />
+                            <ConteneurPortraits3 />
+                            <Bandeau />
+                        </div>
+                    );
+                }
+            }
+
+            // BANDEAU
+            class Bandeau extends React.Component {
+                render() {
+                    return (
+                        <div className="jumbotron bandeau flex">
+                            <img src="http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-25/256/Baldur-s-Gate-3-icon.png" alt="Logo de Baldur's Gate" />
+                            <img src="http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-25/256/Baldur-s-Gate-2-Shadows-of-Amn-1-icon.png" alt="Logo de Baldur's Gate 2" />
+                            <img src="http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-25/256/Icewind-Dale-3-icon.png" alt="Logo d'Icewind Dale" />
+                            <img src="http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-25/256/Baldur-s-Gate-2-Throne-of-Bhaal-1-icon.png" alt="Logo de Throne of Bhaal" />
+                        </div>
+                        );
+                }
+            }
+
+
+            //// PAGE 2
+            // MAINTENANT, TOUS LES ÉLÉMENTS DE LA PAGE 2 SONT EN REACT
+            // Je RÉCUPÈRE LE COMPOSANT <PORTRAIT />, DONC J'ÉVITE DE ME RÉPÉTER
+
+            // BOUTON
+            class Bouton extends React.Component {
+                render() {
+                    return <div><button className="btn btn-primary text-center" id="mon-bouton-bleu">test</button></div>;
+                }
+                /*test*/
+            }
+
+            // PORTRAIT, QUI LUI-MÊME SE TROUVE PARFOIS DANS UN CONTENEUR POUR AVOIR DU FLEX
+            class Portrait extends React.Component {
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <div>
+                            <img src="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" alt="Portrait de personnage de Baldur's Gate" className="portrait img-fluid" />
+                        </div>
+                    );
+                }
+                /*test*/
+            }
+
+            // CONTENEUR PORTRAITS 1
+            class ConteneurPortraits1 extends React.Component {
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <div className="flex">
+                            <Portrait />
+                            <Portrait />
+                        </div>
+                    );
+                }
+                /*test*/
+            }
+
+            //// PAGE 3
+            // MAINTENANT AVEC DES COMPOSANTS AVEC ÉTAT (STATEFUL COMPONENTS)
+
+            // PORTRAIT D'IMOEN DANS BG1
+            class PortraitImoen1 extends React.Component {
+                constructor(props) {
+                    super(props);
+                    // initialize state here
+                    this.state = {
+                        // JE PASSE PAR ICI POUR CHANGER L'ÉTAT ET AFFICHER MON MESSAGE
+                        name: "Imoën",
+                        version: "BG1"
+                    }
+                }
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <figure>
+                            <img src="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" alt="Portrait de personnage de Baldur's Gate" className="portrait img-fluid" />
+                            <figcaption>{this.state.name} dans {this.state.version}</figcaption>
+                        </figure>
+                    );
+                }
+            };
+
+            // PORTRAIT D'IMOEN DANS BG2
+            class PortraitImoen2 extends React.Component {
+                constructor(props) {
+                    super(props);
+                    // initialize state here
+                    this.state = {
+                        name: "Imoën",
+                        version: "BG2"
+                    }
+                }
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <figure>
+                            <img src="https://vignette.wikia.nocookie.net/baldursgategame/images/4/48/Imoen_NIMOEN_Portrait_BG2.png" alt="Portrait de personnage de Baldur's Gate" className="portrait img-fluid" />
+                            <figcaption>{this.state.name} dans {this.state.version}</figcaption>
+                        </figure>
+                    );
+                }
+            };
+
+            // CONTENEUR PORTRAITS 2
+            class ConteneurPortraits2 extends React.Component {
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <div className="flex">
+                            <PortraitImoen1 />
+                            <PortraitImoen2 />
+                        </div>
+                    );
+                }
+                /*test*/
+            }
+
+            //// PAGE 4; AVEC LES "TEMPLATE LITERALS"
+            // ON REMARQUERA L'USAGE D'ACCOLADES ({}) SUPPLÉMENTAIRES EN REACT
+
+            const persos = {
+                imoen1:
+                {
+                    name: "Imoën",
+                    version: "BG1",
+                    lien: "https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png"
+                }
+            };
+
+            class PortraitImoen3 extends React.Component {
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <figure>
+                            <img src={`${persos.imoen1.lien}`} alt={`Portrait du personnage ${persos.imoen1.name}`} title={`Portrait du personnage ${persos.imoen1.name} dans ${persos.imoen1.version}`} className="portrait" />
+                            <figcaption>{`${persos.imoen1.name} dans ${persos.imoen1.version}`}</figcaption>
+                        </figure>
+                    );
+                }
+            };
+
+            //// PAGE 5
+            // EXEMPLE TIRÉ DE W3SCHOOL
+            // MAINTENANT AVEC DES PROPS
+            // MAINTENANT AVEC DU CODE PLUS INTELLIGENT ET POTENTIELLEMENT RÉCUPÉRABLE, MAIS NON RÉCUPÉRÉ
+
+            class Car extends React.Component {
+                render() {
+                    return <h2>I am a {this.props.brand}!</h2>;
+                }
+            }
+
+            class Garage extends React.Component {
+                render() {
+                    return (
+                    <div>
+                        <h1>Who lives in my Garage?</h1>
+                        <Car brand="Ford" />
+                    </div>
+                    );
+                }
+            }
+
+            // PORTRAIT D'IMOEN 4
+
+            class AppelImoen extends React.Component {
+                render() {
+                    return (
+                        <div>
+                            <ModeleFigure lien="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" name="Imoën" version="BG1" />
+                        </div>
+                    );
+                }
+            }
+
+            class ModeleFigure extends React.Component {
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <figure>
+                            <img src={`${this.props.lien}`} alt={`Portrait du personnage ${this.props.name}`} title={`Portrait du personnage ${this.props.name} dans ${this.props.version}`} className="portrait img-fluid" />
+                            <figcaption>{`${this.props.name} dans ${this.props.version}`}</figcaption>
+                        </figure>
+                    );
+                }
+            };
+
+            //// PAGE 6; ON CRÉE MAINTENANT DEUX NOUVELLES CLASSES, DEUX NOUVEAUX PORTRAITS, À PARTIR DE <ModeleFigure />
+            // DONC ON A DU CODE RÉCUPÉRABLE ET EFFECTIVEMENT RÉCUPÉRÉ
+
+            class AppelMontaron extends React.Component {
+                render() {
+                    return (
+                        <div>
+                            <ModeleFigure lien="https://vignette.wikia.nocookie.net/baldursgategame/images/7/75/Montaron_MONTAR_Portrait_BG1.png" name="Montaron" version="BG1" />
+                        </div>
+                    );
+                }
+            }
+
+            class AppelKhalid extends React.Component {
+                render() {
+                    return (
+                        <div>
+                            <ModeleFigure lien="https://vignette.wikia.nocookie.net/baldursgategame/images/9/90/Khalid_KHALID_Portrait_BG1.png" name="Khalid" version="BG1" />
+                        </div>
+                    );
+                }
+            }
+
+            //// PAGE 7; MAINTENANT À L'INTÉRIEUR D'UNE AUTRE CLASSE, ConteneurPortraits3, POUR AVOIR DU FLEX
+
+            class ConteneurPortraits3 extends React.Component {
+                render() {
+                    return ( // ICIGO! IMPORTANCE DES PARENTHÈSES OUVRANTES ET FERMANTES
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-sm flex">
+                                    <AppelImoen />
+                                    <AppelKhalid />
+                                    <AppelMontaron />
+                                </div>
+                            </div>
+                        </div>
+                    );
+                }
+                /*test*/
+            }
+
+            //// CRÉATION DE MAIN
+
+            ReactDOM.render(<Main />, document.querySelector("#root"));
+
+            //// GESTIONNAIRES
+
+            document.querySelector("#mon-bouton-bleu").addEventListener("click", function(){
+                alert("Hello World!");
+                alert(`className: ${this.className}`); // ICIGO! CLASSNAME
+                alert(`id: ${this.id}`); // ICIGO! CLASSNAME
+            });
+
+            ReactDOM.render(<Bandeau />, document.querySelector("#bandeau1"));
+            ReactDOM.render(<Bandeau />, document.querySelector("#bandeau2"));
+
+        </script>
+    </body>
+</html>

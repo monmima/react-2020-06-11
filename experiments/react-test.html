@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>test</title>
+        <style>
+            button {
+                padding: 3px;
+                margin: 15px;
+            }
+            .myDiv {
+                background-color: lightgreen;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <div id="root">Avant injection</div>
+
+        <!--CODE-->
+        <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+        <script type="text/babel">
+
+
+            // TITRE
+            class Bouton extends React.Component {
+                render() {
+                    return <div><button>test</button></div>;
+                }
+                /*test*/
+            }
+
+            class PlusieursBoutons extends React.Component {
+                render() {
+                    return <div className="myDiv">
+                                <Bouton />
+                                <Bouton />
+                                <p>Après injection</p>
+                            </div>;
+                }
+                /*test*/
+            }
+
+            ReactDOM.render(<PlusieursBoutons />, document.querySelector("#root"));
+        </script>
+    </body>
+</html>
