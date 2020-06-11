@@ -25,25 +25,25 @@
 
 
             // TITRE
-            class Bouton extends React.Component {
+            class OneButton extends React.Component {
                 render() {
                     return <div><button>test</button></div>;
                 }
                 /*test*/
             }
 
-            class PlusieursBoutons extends React.Component {
+            class ManyButtons extends React.Component {
                 render() {
                     return <div className="myDiv">
-                                <Bouton />
-                                <Bouton />
+                                <OneButton />
+                                <OneButton />
                                 <p>Après injection</p>
                             </div>;
                 }
                 /*test*/
             }
 
-            ReactDOM.render(<PlusieursBoutons />, document.querySelector("#root"));
+            ReactDOM.render(<ManyButtons />, document.querySelector("#root"));
         </script>
     </body>
 </html>
