@@ -1,1 +1,0 @@
-The files in this folder are stand-alone react apps. They use CDN instead of "npx create-react-app".

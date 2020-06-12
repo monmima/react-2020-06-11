@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /*flex declaration*/
+            display: flex;
+
+            /*flex rules*/
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            /*other rules*/
+            margin: 20px;
+        }
+        dfn {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>React Aide-Mémoire</h1>
+    <p>by <strong><a title="Go to Github" href="http://github.com/monmima">Monmima</a></strong></p>
+    
+    <p>Welcome to the Home Page of this React <dfn title="mnemonic device or memory aid">aide-mémoire</dfn>. This needs a <strong>local or remote server</strong> to run correctly.</p>
+
+    <p>See the images below? They are actually coded in React, even though the rest of this page is static HTML! This proves that with React, it doesn't have to be all or nothing.</p>
+
+    <div id="root"><strong>If you can read this in the browser, the React content has not been injected yet.</strong></div>
+
+    <!--CDN librairies-->
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js" crossorigin></script>
+
+    <!--my own code-->
+    <script type="text/babel" src="./Banner.js"></script>
+    <script type="text/babel" src="./App.js"></script>
+
+    <!--don't forget the type parameter!-->
+    <script type="text/babel">
+        ReactDOM.render(<div><Banner /></div>, document.querySelector("#root"));
+    </script>
+</body>
+</html>
