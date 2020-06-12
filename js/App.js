@@ -8,6 +8,7 @@ function App() {
 		<div className="App">
 			<header >
 				<Banner />
+				<Link url="http://www.rdi.ca" text="texttext" />
 			</header>
 		</div>
 	);
