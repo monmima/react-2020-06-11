@@ -11,16 +11,18 @@
     <div id="challenge-node">Loading React...</div>
 
     <!--CDN librairies-->
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script> -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js" crossorigin></script>
 
     <!--my own code-->
-    <script type="text/babel" src="../js/Fcc013.js"></script>
+    <script type="text/babel" src="../js/Fcc016.js"></script>
 
     <!--don't forget the type parameter!-->
     <script type="text/babel">
-        ReactDOM.render(<Calendar />, document.getElementById('challenge-node'));
+        ReactDOM.render(<ShoppingCart />, document.getElementById('challenge-node'));
     </script>
 </body>
 </html>

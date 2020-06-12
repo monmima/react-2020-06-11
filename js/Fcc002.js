@@ -17,4 +17,3 @@ const JSX = <div>
  * The following line would be necessary with "npx create-react-dom".
  */
 // export default Banner;
-

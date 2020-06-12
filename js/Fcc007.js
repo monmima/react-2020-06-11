@@ -12,8 +12,6 @@ const MyComponent = function() {
     // change code above this line
 };
 
-MyComponent();
-
 /**
  * The following line would be necessary with "npx create-react-dom".
  */
