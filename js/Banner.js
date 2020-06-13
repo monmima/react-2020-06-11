@@ -1,7 +1,3 @@
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// import React from 'react';
 
 class Banner extends React.Component {
     render() {
@@ -15,8 +11,3 @@ class Banner extends React.Component {
         );
     }
 }
-
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// export default Banner;

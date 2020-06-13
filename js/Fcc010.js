@@ -11,7 +11,7 @@ const TypesOfFruit = () => {
             </ul>
       </div>
     );
-  };
+};
 
 const Fruits = () => {
     return (

@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
 
-
-        /*actual CSS*/
-
         dfn {
             border-bottom: 1px dotted #333;
         }
-        header {
+        header, h5 {
+            margin-top: 25px;
+
+            /* flex */
             align-items: center;
             display: flex;
             flex-direction: column;
@@ -33,10 +33,10 @@
             height: auto;
             width: 100px;
         }
+
     </style>
-
-
 </head>
+
 <body class="container">
     <header>
         <h1>React Aide-Mémoire</h1>
@@ -50,13 +50,17 @@
     
     <p>Welcome to the Home Page of this React <dfn title="an aid to the memory (Merriam-Webster's Dictionary)">aide-mémoire</dfn>. This needs a <strong>local or remote server</strong> to run correctly.</p>
 
-    <p>See the banner below? It is actually coded in React, even though the rest of this page is static HTML! This proves that with React, it doesn't have to be all or nothing.</p>
-
     <h5>freeCodeCamp</h5>
 
     <p>I would like to thank freeCodeCamp for making their <a href="https://www.freecodecamp.org/learn/front-end-libraries/react/" title="freeCodeCamp's React Tutorial">React tutorials</a> available and <a href="https://github.com/akashshakya/freecodecamp-react-solution/blame/master/all-in-one.jsx" title="Link to akashshakya's Github account">akashshakya</a> for creating his answer key. Most of the material I use here is basically what they have created.</p>
 
+    <hr>
 
+    <p>See the banner below? It is actually coded in React, even though the container is static HTML! This proves that with React, it doesn't have to be all or nothing.</p>
+
+    <div id="banner"><strong>If you can read this in the browser, the React content has not been injected yet.</strong></div>
+
+    <p><strong>Watch out!</strong> Some pages in this list with a "buggy" note are not working at the moment.</p>
 
     <div id="root"><strong>If you can read this in the browser, the React content has not been injected yet.</strong></div>
 
@@ -67,13 +71,16 @@
 
     <!--my own code-->
     <script type="text/babel" src="./js/Banner.js"></script>
-    <script type="text/babel" src="./js/App.js"></script>
+    <script type="text/babel" src="./js/List.js"></script>
     <script type="text/babel" src="./js/LinkInList.js"></script>
 
     <!--don't forget the type parameter!-->
     <script type="text/babel">
+        ReactDOM.render(<div><Banner /></div>, document.querySelector("#banner"));
         ReactDOM.render(<div><App /></div>, document.querySelector("#root"));
     </script>
+
+    <h5>Note</h5>
 
     <div>
         <pre>

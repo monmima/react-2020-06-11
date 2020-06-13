@@ -1,7 +1,3 @@
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// import React from 'react';
 
 // React: Create a Stateless Functional Component
 const MyComponent = function() {
@@ -12,7 +8,3 @@ const MyComponent = function() {
     // change code above this line
 };
 
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// export default Banner;

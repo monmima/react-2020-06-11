@@ -1,7 +1,3 @@
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// import React from 'react';
 
 const JSX = <div>
                 <h1></h1>
@@ -12,8 +8,3 @@ const JSX = <div>
                     <li>item 3</li>
                 </ul>
             </div>;
-
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// export default Banner;

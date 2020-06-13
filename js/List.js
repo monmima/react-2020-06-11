@@ -6,8 +6,7 @@
 function App() {
 	return (
 		<div className="App">
-			<header >
-				<Banner />
+			<div >
 				<ol>
 					<LinkInList url="html/free-code-camp-001.html" text="Create a Simple JSX Element" />
 					<LinkInList url="html/free-code-camp-002.html" text="Create a Complex JSX Element" />
@@ -24,9 +23,9 @@ function App() {
 					<LinkInList url="html/free-code-camp-013.html" text="Pass Props to a Stateless Functional Component" />
 					<LinkInList url="html/free-code-camp-014.html" text="Pass an Array as PropsUse Default Props" />
 					<LinkInList url="html/free-code-camp-015.html" text="Override Default Props" />
-					<LinkInList url="html/free-code-camp-016.html" text="Use PropTypes to Define the Props You Expect" />
+					<LinkInList url="html/free-code-camp-016.html" text="Use PropTypes to Define the Props You Expect (buggy)" />
 					<LinkInList url="html/free-code-camp-017.html" text="Access Props Using this.props" />
-					<LinkInList url="html/free-code-camp-018.html" text="Review Using Props with Stateless Functional Components" />
+					<LinkInList url="html/free-code-camp-018.html" text="Review Using Props with Stateless Functional Components (buggy)" />
 					<LinkInList url="html/free-code-camp-019.html" text="Render State in the User Interface" />
 					<LinkInList url="html/free-code-camp-020.html" text="Render State in the User Interface Another Way" />
 					<LinkInList url="html/free-code-camp-021.html" text="Set State with this.setState" />
@@ -36,7 +35,7 @@ function App() {
 					<LinkInList url="html/free-code-camp-025.html" text="Create a Controlled Input" />
 					<LinkInList url="html/free-code-camp-026.html" text="Create a Controlled Form" />
 					<LinkInList url="html/free-code-camp-027.html" text="Pass State as Props to Child Components" />
-					<LinkInList url="html/free-code-camp-028.html" text="Pass a Callback as Props" />
+					<LinkInList url="html/free-code-camp-028.html" text="Pass a Callback as Props (buggy)" />
 					<LinkInList url="html/free-code-camp-029.html" text="Use the Lifecycle Method componentWillMount" />
 					<LinkInList url="html/free-code-camp-030.html" text="Use the Lifecycle Method componentDidMount" />
 					<LinkInList url="html/free-code-camp-031.html" text="Add Event Listeners" />
@@ -51,12 +50,12 @@ function App() {
 					<LinkInList url="html/free-code-camp-040.html" text="Change Inline CSS Conditionally Based on Component State" />
 
 					<LinkInList url="html/free-code-camp-041.html" text="Use Array.map() to Dynamically Render Elements" />
-					<LinkInList url="html/free-code-camp-042.html" text="Give Sibling Elements a Unique Key Attribute" />
+					<LinkInList url="html/free-code-camp-042.html" text="Give Sibling Elements a Unique Key Attribute (buggy)" />
 					<LinkInList url="html/free-code-camp-043.html" text="Use Array.filter() to Dynamically Filter an Array" />
-					<LinkInList url="html/free-code-camp-044.html" text="Render React on the Server with renderToString" />
+					<LinkInList url="html/free-code-camp-044.html" text="Render React on the Server with renderToString (buggy)" />
 
 				</ol>
-			</header>
+			</div>
 		</div>
 	);
 }

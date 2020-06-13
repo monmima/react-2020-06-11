@@ -1,7 +1,3 @@
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// import React from 'react';
 
 // React: Create a React Component
 // The other way to define a React component is with the ES6 class syntax. 
@@ -49,8 +45,3 @@ class ParentComponent extends React.Component {
         );
     }
 };
-
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// export default Banner;

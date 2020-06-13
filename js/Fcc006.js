@@ -1,7 +1,3 @@
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// import React from 'react';
 
 //   React: Learn About Self-Closing JSX Tags(like br and hr)
 const JSX = (
@@ -14,8 +10,3 @@ const JSX = (
         {/* // remove comment and change code above this line  */}
     </div>
 );
-
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// export default Banner;
