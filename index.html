@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
-        body {
-            /*flex declaration*/
-            display: flex;
 
-            /*flex rules*/
+
+        /*actual CSS*/
+
+        dfn {
+            border-bottom: 1px dotted #333;
+        }
+        header {
             align-items: center;
+            display: flex;
             flex-direction: column;
             justify-content: center;
-
-            /*other rules*/
-            margin: 20px;
-        }
-        dfn {
-            text-decoration: underline;
         }
 
         /* classes */
@@ -35,18 +34,19 @@
             width: 100px;
         }
     </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
 </head>
-<body>
-    
-    <h1>React Aide-Mémoire</h1>
+<body class="container">
+    <header>
+        <h1>React Aide-Mémoire</h1>
 
-    <p>
-        <strong>
-            <a title="Go to Github" href="http://github.com/monmima">http://github.com/monmima</a>
-        </strong>
-    </p>
+        <p>
+            <strong>
+                <a title="Go to Github" href="http://github.com/monmima">http://github.com/monmima</a>
+            </strong>
+        </p>
+    </header>
     
     <p>Welcome to the Home Page of this React <dfn title="an aid to the memory (Merriam-Webster's Dictionary)">aide-mémoire</dfn>. This needs a <strong>local or remote server</strong> to run correctly.</p>
 
@@ -55,6 +55,8 @@
     <h5>freeCodeCamp</h5>
 
     <p>I would like to thank freeCodeCamp for making their <a href="https://www.freecodecamp.org/learn/front-end-libraries/react/" title="freeCodeCamp's React Tutorial">React tutorials</a> available and <a href="https://github.com/akashshakya/freecodecamp-react-solution/blame/master/all-in-one.jsx" title="Link to akashshakya's Github account">akashshakya</a> for creating his answer key. Most of the material I use here is basically what they have created.</p>
+
+
 
     <div id="root"><strong>If you can read this in the browser, the React content has not been injected yet.</strong></div>
 
@@ -72,5 +74,24 @@
     <script type="text/babel">
         ReactDOM.render(<div><App /></div>, document.querySelector("#root"));
     </script>
+
+    <div>
+        <pre>
+            <samp>
+                <code>
+                    /**
+                    * The following line would be necessary with "npx create-react-dom" (start of the React files).
+                    */
+                    import React from 'react';
+                
+                    /**
+                    * The following line would ALSO be necessary with "npx create-react-dom" (end of the React files).
+                    * "Banner" is just an example here and should be replaced with the name of your component.
+                    */
+                    export default Banner;
+                </code>
+            </samp>
+        </pre>
+    </div>
 </body>
 </html>

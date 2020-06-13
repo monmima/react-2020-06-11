@@ -7,6 +7,7 @@ class ControlledInput extends React.Component {
         };
         // change code below this line
         this.handleChange = this.handleChange.bind(this)
+        
         // change code above this line
     }
     // change code below this line
