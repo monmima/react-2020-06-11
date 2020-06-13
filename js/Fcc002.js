@@ -8,3 +8,5 @@ const JSX = <div>
                     <li>item 3</li>
                 </ul>
             </div>;
+
+ReactDOM.render(JSX, document.querySelector("#root"));

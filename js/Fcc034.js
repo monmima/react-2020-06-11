@@ -14,4 +14,5 @@ class Colorful extends React.Component {
         // change code above this line
     }
 };
-  
+
+ReactDOM.render(<Colorful />, document.getElementById('challenge-node'));

@@ -33,3 +33,5 @@ class GateKeeper extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<GateKeeper />, document.getElementById('challenge-node'));

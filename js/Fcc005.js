@@ -6,3 +6,4 @@ const JSX = (
     </div>
 );
 
+ReactDOM.render(JSX, document.querySelector("#root"));

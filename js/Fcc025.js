@@ -30,3 +30,5 @@ class ControlledInput extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<ControlledInput />, document.getElementById('challenge-node'));

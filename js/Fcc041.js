@@ -22,4 +22,5 @@ function Frameworks() {
         </div>
     );
 };
-  
+
+ReactDOM.render(<Frameworks />, document.getElementById('challenge-node'));

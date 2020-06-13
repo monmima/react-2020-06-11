@@ -44,3 +44,5 @@ class Controller extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<Controller />, document.getElementById('challenge-node'));

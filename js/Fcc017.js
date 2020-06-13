@@ -40,3 +40,5 @@ class ResetPassword extends React.Component {
 		);
 	}
 };
+
+ReactDOM.render(<ResetPassword />, document.getElementById('challenge-node'));

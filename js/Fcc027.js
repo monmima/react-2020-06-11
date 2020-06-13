@@ -29,3 +29,5 @@ class Navbar extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<MyApp />, document.getElementById('challenge-node'));

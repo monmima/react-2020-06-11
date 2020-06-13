@@ -29,3 +29,5 @@ class ShoppingCart extends React.Component {
         return <Items />
     }
 };
+
+ReactDOM.render(<ShoppingCart />, document.getElementById('challenge-node'));

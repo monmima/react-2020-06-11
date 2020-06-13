@@ -1,5 +1,5 @@
-  // React: Render State in the User Interface Another Way
-  class MyComponent extends React.Component {
+// React: Render State in the User Interface Another Way
+class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,3 +19,5 @@
         );
     }
 };
+
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

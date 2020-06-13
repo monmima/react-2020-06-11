@@ -23,3 +23,5 @@ class MyComponent extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

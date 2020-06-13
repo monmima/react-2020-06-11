@@ -47,3 +47,5 @@ class CheckUserAge extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<CheckUserAge />, document.getElementById('challenge-node'));

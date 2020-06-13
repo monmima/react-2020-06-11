@@ -39,3 +39,5 @@ class MyForm extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<MyForm />, document.getElementById('challenge-node'));

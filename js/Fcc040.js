@@ -49,3 +49,5 @@ class MyToDoList extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<MyToDoList />, document.getElementById('challenge-node'));

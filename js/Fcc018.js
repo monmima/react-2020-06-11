@@ -36,3 +36,5 @@ Camper.defaultProps = {
 Camper.propTypes = {
     name: PropTypes.string.isRequired
 }
+
+ReactDOM.render(<CampSite />, document.getElementById('challenge-node'));

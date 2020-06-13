@@ -7,3 +7,5 @@ class Colorful extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<Colorful />, document.getElementById('challenge-node'));

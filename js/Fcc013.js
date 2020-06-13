@@ -26,3 +26,5 @@ const CurrentDate = (props) => {
         );
     }
 };
+
+ReactDOM.render(<Calendar />, document.getElementById('challenge-node'));

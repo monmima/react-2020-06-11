@@ -29,3 +29,5 @@ class ToDo extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<ToDo />, document.getElementById('challenge-node'));

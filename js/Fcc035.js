@@ -73,3 +73,4 @@ class MagicEightBall extends React.Component {
     }
 };
   
+ReactDOM.render(<MagicEightBall />, document.getElementById('challenge-node'));

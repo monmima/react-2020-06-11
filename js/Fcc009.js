@@ -45,3 +45,5 @@ class ParentComponent extends React.Component {
         );
     }
 };
+
+ReactDOM.render(<ParentComponent />, document.querySelector("#root"));

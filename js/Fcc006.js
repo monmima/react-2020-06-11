@@ -10,3 +10,5 @@ const JSX = (
         {/* // remove comment and change code above this line  */}
     </div>
 );
+
+ReactDOM.render(JSX, document.querySelector("#root"));
