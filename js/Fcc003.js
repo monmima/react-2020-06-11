@@ -1,5 +1,6 @@
+// 3. Add Comments in JSX
+// https://www.freecodecamp.org/learn/front-end-libraries/react/add-comments-in-jsx
 
-// React: Add Comments in JSX
 const JSX = (
     <div>
         <h1>This is a block of JSX</h1>

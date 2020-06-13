@@ -1,5 +1,6 @@
+// 7. Create a Stateless Functional Component
+// https://www.freecodecamp.org/learn/front-end-libraries/react/create-a-stateless-functional-component
 
-// React: Create a Stateless Functional Component
 const MyComponent = function() {
     // change code below this line
     return (

@@ -1,5 +1,6 @@
+// 6. Learn About Self-Closing JSX Tags(like br and hr)
+// https://www.freecodecamp.org/learn/front-end-libraries/react/learn-about-self-closing-jsx-tags
 
-//   React: Learn About Self-Closing JSX Tags(like br and hr)
 const JSX = (
     <div>
         {/* // remove comment and change code below this line */}

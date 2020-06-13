@@ -1,4 +1,4 @@
-//   React: Render a Class Component to the DOM
+// Render a Class Component to the DOM
 
 const Vegetables = () => {
     return (
