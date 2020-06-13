@@ -15,10 +15,10 @@ class MyApp extends React.Component {
     render() {
       return (
         <div>
-        { /* change code below this line */ }
-        <GetInput input={this.state.inputValue} handleChange={this.handleChange}/>
-        <RenderInput input={this.state.inputValue}/>
-        { /* change code above this line */ }
+			{ /* change code below this line */ }
+			<GetInput input={this.state.inputValue} handleChange={this.handleChange}/>
+			<RenderInput input={this.state.inputValue}/>
+			{ /* change code above this line */ }
         </div>
         );
     }
@@ -37,7 +37,7 @@ class GetInput extends React.Component {
                 onChange={this.props.handleChange}/>
         </div>
     );
-    // }
+    }
 };
   
 class RenderInput extends React.Component {
@@ -45,11 +45,13 @@ class RenderInput extends React.Component {
       super(props);
     }
     render() {
-      return (
-        <div>
-          <h3>Input Render:</h3>
-          <p>{this.props.input}</p>
-        </div>
-      );
+		return (
+			<div>
+				<h3>Input Render:</h3>
+				<p>{this.props.input}</p>
+			</div>
+		);
     }
 };
+
+ReactDOM.render(<MyApp />, document.getElementById('challenge-node'));

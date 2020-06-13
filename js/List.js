@@ -35,7 +35,7 @@ function App() {
 					<LinkInList url="html/free-code-camp-025.html" text="Create a Controlled Input" />
 					<LinkInList url="html/free-code-camp-026.html" text="Create a Controlled Form" />
 					<LinkInList url="html/free-code-camp-027.html" text="Pass State as Props to Child Components" />
-					<LinkInList url="html/free-code-camp-028.html" text="Pass a Callback as Props (buggy)" />
+					<LinkInList url="html/free-code-camp-028.html" text="Pass a Callback as Props" />
 					<LinkInList url="html/free-code-camp-029.html" text="Use the Lifecycle Method componentWillMount" />
 					<LinkInList url="html/free-code-camp-030.html" text="Use the Lifecycle Method componentDidMount" />
 					<LinkInList url="html/free-code-camp-031.html" text="Add Event Listeners" />
@@ -50,10 +50,9 @@ function App() {
 					<LinkInList url="html/free-code-camp-040.html" text="Change Inline CSS Conditionally Based on Component State" />
 
 					<LinkInList url="html/free-code-camp-041.html" text="Use Array.map() to Dynamically Render Elements" />
-					<LinkInList url="html/free-code-camp-042.html" text="Give Sibling Elements a Unique Key Attribute (buggy)" />
+					<LinkInList url="html/free-code-camp-042.html" text="Give Sibling Elements a Unique Key Attribute" />
 					<LinkInList url="html/free-code-camp-043.html" text="Use Array.filter() to Dynamically Filter an Array" />
 					<LinkInList url="html/free-code-camp-044.html" text="Render React on the Server with renderToString (buggy)" />
-
 				</ol>
 			</div>
 		</div>
