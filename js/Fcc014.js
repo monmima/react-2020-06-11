@@ -11,7 +11,7 @@ const CurrentDate = (props) => {
     );
 };
 
-  class Calendar extends React.Component {
+class Calendar extends React.Component {
     constructor(props) {
         super(props);
     }

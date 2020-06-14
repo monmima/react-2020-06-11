@@ -2,13 +2,11 @@
 // import "./App.css";
 // import Banner from './Banner';
 
-
 function App() {
 	return (
 		<div className="App">
 			<div >
 				<ol>
-
 					<LinkInList url="html/free-code-camp-001.html" text="Create a Simple JSX Element" />
 					<LinkInList url="html/free-code-camp-002.html" text="Create a Complex JSX Element" />
 					<LinkInList url="html/free-code-camp-003.html" text="Add Comments in JSX" />
@@ -29,7 +27,7 @@ function App() {
 					<LinkInList url="html/free-code-camp-018.html" text="Use PropTypes to Define the Props You Expect (buggy)" />
 					<LinkInList url="html/free-code-camp-019.html" text="Access Props Using this.props" />
 					<LinkInList url="html/free-code-camp-020.html" text="Review Using Props with Stateless Functional Components (buggy)" />
-					<LinkInList url="html/free-code-camp-021.html" text="Create a Stateful Component (buggy)" />
+					<LinkInList url="html/free-code-camp-021.html" text="Create a Stateful Component" />
 					<LinkInList url="html/free-code-camp-022.html" text="Render State in the User Interface" />
 					<LinkInList url="html/free-code-camp-023.html" text="Render State in the User Interface Another Way" />
 					<LinkInList url="html/free-code-camp-024.html" text="Set State with this.setState" />
@@ -56,7 +54,6 @@ function App() {
 					<LinkInList url="html/free-code-camp-045.html" text="Give Sibling Elements a Unique Key Attribute" />
 					<LinkInList url="html/free-code-camp-046.html" text="Use Array.filter() to Dynamically Filter an Array" />
 					<LinkInList url="html/free-code-camp-047.html" text="Render React on the Server with renderToString (buggy)" />
-
 				</ol>
 			</div>
 		</div>
