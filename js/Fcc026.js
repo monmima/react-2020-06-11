@@ -1,43 +1,46 @@
-// React: Create a Controlled Form
-// Note:  You also must call event.preventDefault() in the submit handler, to prevent the default form submit behavior which will refresh the web page.
-class MyForm extends React.Component {
+// 26. Use State to Toggle an Element
+
+class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-        input: '',
-        submit: ''
+            visibility: false
         };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-    handleChange(event) {
-        this.setState({
-        input: event.target.value
-        });
-    }
-    handleSubmit(event) {
         // change code below this line
-        event.preventDefault();
-        this.setState({
-            submit: this.state.input
-        }); 
+        this.toggleVisibility = this.toggleVisibility.bind(this);
         // change code above this line
     }
+
+    // change code below this line
+    toggleVisibility(){
+        if (!this.state.visibility) {
+            this.setState({
+                visibility: true
+            });
+        } else {
+            this.setState({
+                visibility: false
+            });
+        }
+    }
+
+    // change code above this line
     render() {
-        return (
-        <div>
-            <form onSubmit={this.handleSubmit}>
-                { /* change code below this line */ }
-                <input value={this.state.input} onChange={this.handleChange}/>
-                { /* change code above this line */ }
-                <button type='submit'>Submit!</button>
-            </form>
-            { /* change code below this line */ }
-            <h1>{this.state.submit}</h1>
-            { /* change code above this line */ }
-        </div>
-        );
+        if (this.state.visibility) {
+            return (
+                <div>
+                <button onClick={this.toggleVisibility}>Click Me</button>
+                <h1>Now you see me!</h1>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                <button onClick={this.toggleVisibility}>Click Me</button>
+                </div>
+            );
+        }
     }
 };
 
-ReactDOM.render(<MyForm />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

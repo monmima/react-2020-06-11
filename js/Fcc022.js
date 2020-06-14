@@ -1,30 +1,19 @@
-// React: Bind 'this' to a Class Method
+// 22. Render State in the User Interface
+
 class MyComponent extends React.Component {
     constructor(props) {
-            super(props);
-            this.state = {
-            itemCount: 0
-        };
-        // change code below this line
-        // without this binding it will not work bcoz this keyword is of undefined. 
-        // so we need to bind this in the constructor so this
-        // becomes bound to the class methods when the component is initialized.
-        this.addItem = this.addItem.bind(this);
-        // change code above this line
-    }
-    addItem() {
-        this.setState({
-            itemCount: this.state.itemCount + 1
-        });
+        super(props);
+        this.state = {
+            name: 'freeCodeCamp'
+        }
     }
     render() {
         return (
-        <div>
-            { /* change code below this line */ }
-            <button onClick={this.addItem}>Click Me</button>
-            { /* change code above this line */ }
-            <h1>Current Item Count: {this.state.itemCount}</h1>
-        </div>
+            <div>
+                { /* change code below this line */ }
+                <h1>{this.state.name}</h1>
+                { /* change code above this line */ }
+            </div>
         );
     }
 };

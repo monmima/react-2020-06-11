@@ -1,40 +1,58 @@
-// React: Add Event Listeners
-class MyComponent extends React.Component {
+// 31. Pass a Callback as Props
+
+class MyApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            message: ''
-        };
-        this.handleEnter = this.handleEnter.bind(this);
-        this.handleKeyPress = this.handleKeyPress.bind(this);
+            inputValue: ''
+        }
+        this.handleChange = this.handleChange.bind(this);
     }
-    // change code below this line
-    componentDidMount() {
-        // use this keyword
-        document.addEventListener("keydown", this.handleKeyPress);
-    }
-    componentWillUnmount() {
-        // use this keyword
-        document.removeEventListener("keydown", this.handleKeyPress);
-    }
-    // change code above this line
-    handleEnter() {
+    handleChange(event) {
         this.setState({
-            message: this.state.message + 'You pressed the enter key! '
+            inputValue: event.target.value
         });
     }
-    handleKeyPress(event) {
-        if (event.keyCode === 13) {
-            this.handleEnter();
-        }
+    render() {
+      return (
+        <div>
+			{ /* change code below this line */ }
+			<GetInput input={this.state.inputValue} handleChange={this.handleChange}/>
+			<RenderInput input={this.state.inputValue}/>
+			{ /* change code above this line */ }
+        </div>
+        );
+    }
+  };
+  
+class GetInput extends React.Component {
+    constructor(props) {
+        super(props);
     }
     render() {
-        return (
-            <div>
-                <h1>{this.state.message}</h1>
-            </div>
-        );
+      return (
+        <div>
+            <h3>Get Input:</h3>
+            <input
+                value={this.props.input}
+                onChange={this.props.handleChange}/>
+        </div>
+    );
+    }
+};
+  
+class RenderInput extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+    render() {
+		return (
+			<div>
+				<h3>Input Render:</h3>
+				<p>{this.props.input}</p>
+			</div>
+		);
     }
 };
 
-ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyApp />, document.getElementById('challenge-node'));

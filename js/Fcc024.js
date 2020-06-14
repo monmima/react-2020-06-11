@@ -1,47 +1,30 @@
-// React: Write a Simple Counter
-class Counter extends React.Component {
+// 24. Set State with this.setState
+
+class MyComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			count: 0
+			name: 'Initial State'
 		};
+		this.handleClick = this.handleClick.bind(this);
+	}
+	handleClick() {
 		// change code below this line
-		this.increment = this.increment.bind(this);
-		this.decrement = this.decrement.bind(this);
-		this.reset = this.reset.bind(this);
+		// Note the setState Syntax
+		this.setState({
+			name: "React Rocks!"
+		});
+
 		// change code above this line
 	}
-	// change code below this line
-	increment(){
-		this.setState({
-			// on right side this.state is required
-			count: this.state.count + 1
-		});
-	}
-	decrement(){
-		this.setState({
-			// on right side this.state is required
-			count: this.state.count - 1
-		});
-	}
-	reset(){
-		this.setState({
-			// on right side this.state is required
-			count: 0
-		});
-	}
-
-	// change code above this line
 	render() {
 		return (
 			<div>
-				<button className='inc' onClick={this.increment}>Increment!</button>
-				<button className='dec' onClick={this.decrement}>Decrement!</button>
-				<button className='reset' onClick={this.reset}>Reset</button>
-				<h1>Current Count: {this.state.count}</h1>
+				<button onClick={this.handleClick}>Click Me</button>
+				<h1>{this.state.name}</h1>
 			</div>
 		);
 	}
 };
 
-ReactDOM.render(<Counter />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

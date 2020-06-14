@@ -1,48 +1,18 @@
-// React: Optimize Re-Renders with shouldComponentUpdate
-class OnlyEvens extends React.Component {
+// 32. Use the Lifecycle Method componentWillMount
+// The componentWillMount() method is called before the render() method when a component is being mounted to the DOM. Log something to the console within componentWillMount() - you may want to have your browser console open to see the output.
+
+class MyComponent extends React.Component {
     constructor(props) {
         super(props);
     }
-    shouldComponentUpdate(nextProps, nextState) {
-        console.log('Should I update?');
+    componentWillMount() {
         // change code below this line
-        if (nextProps.value % 2 === 0 ) {
-            return true;
-        }
+        console.log("this component will mount");
         // change code above this line
     }
-    componentWillReceiveProps(nextProps) {
-        console.log('Receiving new props...');
-    }
-    componentDidUpdate() {
-        console.log('Component re-rendered.');
-    }
     render() {
-        return <h1>{this.props.value}</h1>
-    }
-};
-  
-class Controller extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            value: 0
-        };
-        this.addValue = this.addValue.bind(this);
-    }
-    addValue() {
-        this.setState({
-            value: this.state.value + 1
-        });
-    }
-    render() {
-        return (
-            <div>
-                <button onClick={this.addValue}>Add</button>
-                <OnlyEvens value={this.state.value}/>
-            </div>
-        );
+        return <div />
     }
 };
 
-ReactDOM.render(<Controller />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

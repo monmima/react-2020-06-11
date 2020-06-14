@@ -1,17 +1,44 @@
-// React: Use the Lifecycle Method componentWillMount
-// The componentWillMount() method is called before the render() method when a component is being mounted to the DOM. Log something to the console within componentWillMount() - you may want to have your browser console open to see the output.
-class MyComponent extends React.Component {
+// 29. Create a Controlled Form
+// Note: You also must call event.preventDefault() in the submit handler, to prevent the default form submit behavior which will refresh the web page.
+
+class MyForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+        input: '',
+        submit: ''
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
-    componentWillMount() {
+    handleChange(event) {
+        this.setState({
+        input: event.target.value
+        });
+    }
+    handleSubmit(event) {
         // change code below this line
-        console.log("this component will mount");
+        event.preventDefault();
+        this.setState({
+            submit: this.state.input
+        }); 
         // change code above this line
     }
     render() {
-        return <div />
+        return (
+        <div>
+            <form onSubmit={this.handleSubmit}>
+                { /* change code below this line */ }
+                <input value={this.state.input} onChange={this.handleChange}/>
+                { /* change code above this line */ }
+                <button type='submit'>Submit!</button>
+            </form>
+            { /* change code below this line */ }
+            <h1>{this.state.submit}</h1>
+            { /* change code above this line */ }
+        </div>
+        );
     }
 };
 
-ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyForm />, document.getElementById('challenge-node'));

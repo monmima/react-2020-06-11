@@ -1,49 +1,38 @@
-// React: Use Array.filter() to Dynamically Filter an Array
-class MyComponent extends React.Component {
+// 43. Change Inline CSS Conditionally Based on Component State
+
+class GateKeeper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            users: [
-            {
-                username: 'Jeff',
-                online: true
-            },
-            {
-                username: 'Alan',
-                online: false
-            },
-            {
-                username: 'Mary',
-                online: true
-            },
-            {
-                username: 'Jim',
-                online: false
-            },
-            {
-                username: 'Sara',
-                online: true
-            },
-            {
-                username: 'Laura',
-                online: true
-            }
-            ]
-        }
+            input: ''
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event) {
+        this.setState({ input: event.target.value })
     }
     render() {
-        const usersOnline = this.state.users.filter(user => user.online); // change code here
-        const renderOnline = usersOnline.map((user) => <li  key = {user.username.toString()}>{user.username}</li>); 
-        // change code here
+        let inputStyle = {
+            border: '1px solid black'
+        };
+        // change code below this line
+        const char = 15;
+        if(this.state.input.length > char) { 
+            {inputStyle = {border: '3px solid red'}}
+        }
+  
+        // change code above this line
         return (
             <div>
-            <h1>Current Online Users:</h1>
-            <ul>
-                {renderOnline}
-            </ul>
+            <h3>Don't Type Too Much:</h3>
+            <input
+                type="text"
+                style={inputStyle}
+                value={this.state.input}
+                onChange={this.handleChange} />
             </div>
         );
     }
 };
 
-ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
+ReactDOM.render(<GateKeeper />, document.getElementById('challenge-node'));

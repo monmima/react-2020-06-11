@@ -1,34 +1,33 @@
-// React: Create a Controlled Input
-class ControlledInput extends React.Component {
+// 25. Bind 'this' to a Class Method
+
+class MyComponent extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {
-            input: ''
+            super(props);
+            this.state = {
+            itemCount: 0
         };
         // change code below this line
-        this.handleChange = this.handleChange.bind(this)
-        
+        // without this binding it will not work bcoz this keyword is of undefined. 
+        // so we need to bind this in the constructor so this
+        // becomes bound to the class methods when the component is initialized.
+        this.addItem = this.addItem.bind(this);
         // change code above this line
     }
-    // change code below this line
-    handleChange(e){
+    addItem() {
         this.setState({
-            input: e.target.value
+            itemCount: this.state.itemCount + 1
         });
     }
-    // change code above this line
     render() {
         return (
         <div>
-            { /* change code below this line */}
-            {/* onChange is an event that if triggered then handleChange Function will execute above */}
-            <input value={this.state.input} onChange={this.handleChange}/>
-            { /* change code above this line */}
-            <h4>Controlled Input:</h4>
-            <p>{this.state.input}</p>
+            { /* change code below this line */ }
+            <button onClick={this.addItem}>Click Me</button>
+            { /* change code above this line */ }
+            <h1>Current Item Count: {this.state.itemCount}</h1>
         </div>
         );
     }
 };
 
-ReactDOM.render(<ControlledInput />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

@@ -1,22 +1,34 @@
-// React: Override Default Props
-const Items = (props) => {
-    return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-}
+// 15. Pass an Array as Props
 
-Items.defaultProps = {
-    quantity: 0
-}
+// use Array methods such as join() can be used when accessing the property.
+// for eg
+{/* <ParentComponent>
+    <ChildComponent colors={["green", "blue", "red"]} />
+</ParentComponent> */}
 
-class ShoppingCart extends React.Component {
+const List= (props) => {
+    { /* change code below this line */ }
+    return <p>{props.tasks.join(", ")}</p>
+    { /* change code above this line */ }
+};
+
+class ToDo extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
-        { /* change code below this line */ }
-        // overriding the default props is same as explicitly setting up the props 
-        return <Items quantity={10}/>
-        { /* change code above this line */ }
+        return (
+            <div>
+                <h1>To Do Lists</h1>
+                <h2>Today</h2>
+                { /* change code below this line */ }
+                <List tasks={ ["walk dog", "workout"]}/>
+                <h2>Tomorrow</h2>
+                <List tasks={ ["walk dog", "workout", "sleep"]}/>
+                { /* change code above this line */ }
+            </div>
+        );
     }
 };
 
-ReactDOM.render(<ShoppingCart />, document.getElementById('challenge-node'));
+ReactDOM.render(<ToDo />, document.getElementById('challenge-node'));

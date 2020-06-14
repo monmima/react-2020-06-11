@@ -1,57 +1,35 @@
-// React: Pass a Callback as Props
-class MyApp extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            inputValue: ''
-        }
-        this.handleChange = this.handleChange.bind(this);
-    }
-    handleChange(event) {
-        this.setState({
-            inputValue: event.target.value
-        });
-    }
-    render() {
-      return (
-        <div>
-			{ /* change code below this line */ }
-			<GetInput input={this.state.inputValue} handleChange={this.handleChange}/>
-			<RenderInput input={this.state.inputValue}/>
-			{ /* change code above this line */ }
-        </div>
-        );
-    }
-  };
-  
-class GetInput extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-      return (
-        <div>
-            <h3>Get Input:</h3>
-            <input
-                value={this.props.input}
-                onChange={this.props.handleChange}/>
-        </div>
-    );
-    }
-};
-  
-class RenderInput extends React.Component {
-    constructor(props) {
+// 28. Create a Controlled Input
+
+class ControlledInput extends React.Component {
+  constructor(props) {
       super(props);
-    }
-    render() {
-		return (
-			<div>
-				<h3>Input Render:</h3>
-				<p>{this.props.input}</p>
-			</div>
-		);
-    }
+      this.state = {
+          input: ''
+      };
+      // change code below this line
+      this.handleChange = this.handleChange.bind(this)
+      
+      // change code above this line
+  }
+  // change code below this line
+  handleChange(e){
+      this.setState({
+          input: e.target.value
+      });
+  }
+  // change code above this line
+  render() {
+      return (
+      <div>
+          { /* change code below this line */}
+          {/* onChange is an event that if triggered then handleChange Function will execute above */}
+          <input value={this.state.input} onChange={this.handleChange}/>
+          { /* change code above this line */}
+          <h4>Controlled Input:</h4>
+          <p>{this.state.input}</p>
+      </div>
+      );
+  }
 };
 
-ReactDOM.render(<MyApp />, document.getElementById('challenge-node'));
+ReactDOM.render(<ControlledInput />, document.getElementById('challenge-node'));

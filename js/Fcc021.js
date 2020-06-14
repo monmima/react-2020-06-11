@@ -1,29 +1,28 @@
-// React: Set State with this.setState
-class MyComponent extends React.Component {
+// 21. Create a Stateful Component
+// for eg : setting up the state
+
+this.state = {
+	// describe your state here
+}
+  
+// One of the most important topics in React is state. State consists of any data your application needs to know about, that can change over time. You want your apps to respond to state changes and present an updated UI when necessary. React offers a nice solution for the state management of modern web applications.
+  
+class StatefulComponent extends React.Component {
 	constructor(props) {
 		super(props);
+		// initialize state here
 		this.state = {
-			name: 'Initial State'
-		};
-		this.handleClick = this.handleClick.bind(this);
-	}
-	handleClick() {
-		// change code below this line
-		// Note the setState Syntax
-		this.setState({
-			name: "React Rocks!"
-		});
+			name: "Akash Shakya"
+		}
 
-		// change code above this line
 	}
 	render() {
 		return (
 			<div>
-				<button onClick={this.handleClick}>Click Me</button>
 				<h1>{this.state.name}</h1>
 			</div>
 		);
 	}
 };
 
-ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));
+ReactDOM.render(<StatefulComponent />, document.getElementById('challenge-node'));

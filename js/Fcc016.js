@@ -1,33 +1,19 @@
-//   React: Use PropTypes to Define the Props You Expect
-/*It's considered a best practice to set propTypes when you know the type of a prop ahead of time.
-You can define a propTypes property for a component in the same way you defined defaultProps. 
-Doing this will check that props of a given key are present with a given type. */
+// 16. Use Default Props
 
-// import React, { PropTypes } from 'react';
-const Items = (props) => {
-    return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+// React assigns default props if props are undefined, 
+// but if you pass null as the value for a prop, it will remain null.
+const ShoppingCart = (props) => {
+    return (
+        <div>
+            <h1>Shopping Cart Component:</h1>
+        </div>
+    )
 };
 
 // change code below this line
-// here proptypes start with small P
-Items.propTypes = {
-    // quantity should be of type number
-    // here proptypes start with Capital P
-    quantity: PropTypes.number.isRequired
-};
-// change code above this line
-
-Items.defaultProps = {
-    quantity: 0
-};
-
-class ShoppingCart extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <Items />
-    }
+// Assign Default Props to ShoppingCard Component
+ShoppingCart.defaultProps = {
+    items: 0
 };
 
 ReactDOM.render(<ShoppingCart />, document.getElementById('challenge-node'));

@@ -1,37 +1,35 @@
-// React: Change Inline CSS Conditionally Based on Component State
-class GateKeeper extends React.Component {
+// 39. Render with an If/Else Condition
+
+class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: ''
-        };
-        this.handleChange = this.handleChange.bind(this);
+            display: true
+        }
+        this.toggleDisplay = this.toggleDisplay.bind(this);
     }
-    handleChange(event) {
-        this.setState({ input: event.target.value })
+    toggleDisplay() {
+        this.setState({
+            display: !this.state.display
+        });
     }
     render() {
-        let inputStyle = {
-            border: '1px solid black'
-        };
         // change code below this line
-        const char = 15;
-        if(this.state.input.length > char) { 
-            {inputStyle = {border: '3px solid red'}}
+        if (this.state.display){
+            return (
+                <div>
+                    <button onClick={this.toggleDisplay}>Toggle Display</button>
+                    <h1>Displayed!</h1>
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    <button onClick={this.toggleDisplay}>Toggle Display</button>
+                </div>
+            );
         }
-  
-        // change code above this line
-        return (
-            <div>
-            <h3>Don't Type Too Much:</h3>
-            <input
-                type="text"
-                style={inputStyle}
-                value={this.state.input}
-                onChange={this.handleChange} />
-            </div>
-        );
     }
 };
 
-ReactDOM.render(<GateKeeper />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

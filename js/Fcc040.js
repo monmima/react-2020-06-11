@@ -1,53 +1,28 @@
-// React: Use Array.map() to Dynamically Render Elements
-const textAreaStyles = {
-    width: 235,
-    margin: 5
-};
-  
-class MyToDoList extends React.Component {
+// 40. Use && for a More Concise Conditional
+
+class MyComponent extends React.Component {
     constructor(props) {
         super(props);
-        // change code below this line
         this.state = {
-            userInput: '',
-            toDoList: []
+            display: true
         }
-        // change code above this line
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.toggleDisplay = this.toggleDisplay.bind(this);
     }
-    handleSubmit() {
-        const itemsArray = this.state.userInput.split(',');
+    toggleDisplay() {
         this.setState({
-            toDoList: itemsArray
-        });
-    }
-    handleChange(e) {
-        this.setState({
-            userInput: e.target.value
+            display: !this.state.display
         });
     }
     render() {
-        // change code here
-        // Note this code
-        const items = this.state.toDoList.map((items) => 
-            <li>{items}</li>
-        ); 
+        // change code below this line
         return (
             <div>
-                <textarea
-                    onChange={this.handleChange}
-                    value={this.state.userInput}
-                    style={textAreaStyles}
-                    placeholder="Separate Items With Commas" /><br />
-                <button onClick={this.handleSubmit}>Create List</button>
-                <h1>My "To Do" List:</h1>
-                <ul>
-                    {items}
-                </ul>
+                <button onClick={this.toggleDisplay}>Toggle Display</button>
+                {/* //  using && instead of if/else */}
+                {this.state.display && <h1>Displayed!</h1>}
             </div>
         );
     }
 };
 
-ReactDOM.render(<MyToDoList />, document.getElementById('challenge-node'));
+ReactDOM.render(<MyComponent />, document.getElementById('challenge-node'));

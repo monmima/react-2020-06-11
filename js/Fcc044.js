@@ -1,12 +1,54 @@
-// React: Render React on the Server with renderToString
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return <div/>
-    }
+// 44. Use Array.map() to Dynamically Render Elements
+
+const textAreaStyles = {
+    width: 235,
+    margin: 5
 };
   
-// change code below this line
-ReactDOMServer.renderToString(<App/>);
+class MyToDoList extends React.Component {
+    constructor(props) {
+        super(props);
+        // change code below this line
+        this.state = {
+            userInput: '',
+            toDoList: []
+        }
+        // change code above this line
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleSubmit() {
+        const itemsArray = this.state.userInput.split(',');
+        this.setState({
+            toDoList: itemsArray
+        });
+    }
+    handleChange(e) {
+        this.setState({
+            userInput: e.target.value
+        });
+    }
+    render() {
+        // change code here
+        // Note this code
+        const items = this.state.toDoList.map((items) => 
+            <li>{items}</li>
+        ); 
+        return (
+            <div>
+                <textarea
+                    onChange={this.handleChange}
+                    value={this.state.userInput}
+                    style={textAreaStyles}
+                    placeholder="Separate Items With Commas" /><br />
+                <button onClick={this.handleSubmit}>Create List</button>
+                <h1>My "To Do" List:</h1>
+                <ul>
+                    {items}
+                </ul>
+            </div>
+        );
+    }
+};
+
+ReactDOM.render(<MyToDoList />, document.getElementById('challenge-node'));
