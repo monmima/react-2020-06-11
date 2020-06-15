@@ -36,9 +36,9 @@ class GameOfChance extends React.Component {
         let expression = Math.random() > .5; // change code here
         return (
             <div>
-                <button onClick={this.handleClick}>Play Again</button>
+                <button onClick = {this.handleClick}>Play Again</button>
                 { /* change code below this line */ }
-                <Results fiftyFifty={expression} />
+                <Results fiftyFifty = {expression} />
                 { /* change code above this line */ }
                 <p>{'Turn: ' + this.state.counter}</p>
             </div>

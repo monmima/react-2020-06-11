@@ -26,10 +26,10 @@ class GateKeeper extends React.Component {
             <div>
             <h3>Don't Type Too Much:</h3>
             <input
-                type="text"
-                style={inputStyle}
-                value={this.state.input}
-                onChange={this.handleChange} />
+                type = "text"
+                style = {inputStyle}
+                value = {this.state.input}
+                onChange = {this.handleChange} />
             </div>
         );
     }

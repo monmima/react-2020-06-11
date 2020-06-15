@@ -7,7 +7,7 @@ class MyComponent extends React.Component {
             itemCount: 0
         };
         // change code below this line
-        // without this binding it will not work bcoz this keyword is of undefined. 
+        // without this binding it will not work because this keyword is undefined. 
         // so we need to bind this in the constructor so this
         // becomes bound to the class methods when the component is initialized.
         this.addItem = this.addItem.bind(this);

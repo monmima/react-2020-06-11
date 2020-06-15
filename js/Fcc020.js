@@ -1,3 +1,5 @@
+// 20. Review Using Props with Stateless Functional Components
+
 class CampSite extends React.Component {
     constructor(props) {
         super(props);
