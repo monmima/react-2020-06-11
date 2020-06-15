@@ -15,7 +15,7 @@ class ShoppingCart extends React.Component {
     render() {
         { /* change code below this line */ }
         // overriding the default props is same as explicitly setting up the props 
-        return <Items quantity={10}/>
+        return <Items quantity = {10} />
         { /* change code above this line */ }
     }
 };

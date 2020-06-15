@@ -24,9 +24,9 @@ function App() {
 					<LinkInList url="html/free-code-camp-015.html" text="Pass an Array as Props" />
 					<LinkInList url="html/free-code-camp-016.html" text="Use Default Props" />
 					<LinkInList url="html/free-code-camp-017.html" text="Override Default Props" />
-					<LinkInList url="html/free-code-camp-018.html" text="Use PropTypes to Define the Props You Expect (buggy)" />
+					<LinkInList url="html/free-code-camp-018.html" text="Use PropTypes to Define the Props You Expect" />
 					<LinkInList url="html/free-code-camp-019.html" text="Access Props Using this.props" />
-					<LinkInList url="html/free-code-camp-020.html" text="Review Using Props with Stateless Functional Components (buggy)" />
+					<LinkInList url="html/free-code-camp-020.html" text="Review Using Props with Stateless Functional Components" />
 					<LinkInList url="html/free-code-camp-021.html" text="Create a Stateful Component" />
 					<LinkInList url="html/free-code-camp-022.html" text="Render State in the User Interface" />
 					<LinkInList url="html/free-code-camp-023.html" text="Render State in the User Interface Another Way" />
@@ -54,10 +54,12 @@ function App() {
 					<LinkInList url="html/free-code-camp-045.html" text="Give Sibling Elements a Unique Key Attribute" />
 					<LinkInList url="html/free-code-camp-046.html" text="Use Array.filter() to Dynamically Filter an Array" />
 					<LinkInList url="html/free-code-camp-047.html" text="Render React on the Server with renderToString (buggy)" />
+
+					<hr />
+
+					<LinkInList url="html/summary.html" text="Summary" />
 				</ol>
 			</div>
 		</div>
 	);
 }
-
-// export default App;
