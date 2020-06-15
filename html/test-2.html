@@ -11,20 +11,25 @@
         body, figure {
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
         img {
             margin: 20px;
         }
 
-        main {
+        figure, main {
             align-items: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        main > img {
+        main {
+            flex-flow: row wrap;
+        }
+
+        main img {
             height: 330px;
             width: 220px;
         }
@@ -46,6 +51,7 @@
             height: auto;
             width: 100px;
         }
+
     </style>
 </head>
 <body>

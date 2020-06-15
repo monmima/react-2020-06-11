@@ -33,8 +33,23 @@ class MyComponent extends React.Component {
                 <Banner />
                     <main>
 
-                        <img src="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" alt="Imoen" />
-                        <RandomNumber />
+						<figure>
+							<img src="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" alt="Imoen" />
+							
+							<ficaption>
+								Portrait d'Imoen
+								<RandomNumber />
+							</ficaption>
+						</figure>
+
+						<figure>
+							<img src="https://vignette.wikia.nocookie.net/baldursgategame/images/6/64/Imoen_IMOEN_Portrait_BG1.png" alt="Imoen" />
+							
+							<ficaption>
+								Portrait d'Imoen
+								<RandomNumber />
+							</ficaption>
+						</figure>
 
                     </main>
                 <Banner />
