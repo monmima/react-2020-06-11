@@ -1,7 +1,3 @@
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// import React from 'react';
 
 class Link extends React.Component {
     render() {
@@ -10,8 +6,3 @@ class Link extends React.Component {
         );
     }
 }
-
-/**
- * The following line would be necessary with "npx create-react-dom".
- */
-// export default Banner;

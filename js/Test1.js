@@ -36,6 +36,33 @@ class MyState extends React.Component {
     }
 };
 
+// 24. Set State with this.setState
+class SetState extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			name: 'Initial State'
+		};
+		this.handleClick = this.handleClick.bind(this);
+	}
+	handleClick() {
+		// change code below this line
+		// Note the setState Syntax
+		this.setState({
+			name: "React Rocks!"
+		});
+
+		// change code above this line
+	}
+	render() {
+		return (
+			<div>
+				<button onClick={this.handleClick}>Click Me</button><span>{this.state.name}</span>
+			</div>
+		);
+	}
+};
+
 // 34. Add Event Listeners
 class Event extends React.Component {
     render() {
@@ -147,6 +174,9 @@ class App extends React.Component {
 
                 <h3>22. Render State in the User Interface</h3>
                 <MyState />
+
+                <h3>24. Set State with this.setState</h3>
+                <SetState />
 
                 <h3>34. Add Event Listeners</h3>
                 <Event />
