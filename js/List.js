@@ -60,6 +60,7 @@ function App() {
 					<LinkInList url="html/test-1.html" text="Summary" />
 					<LinkInList url="html/test-2.html" text="Baldur's Gate" />
 					<LinkInList url="html/test-3.html" text="API Fetching" />
+					<LinkInList url="html/test-4.html" text="API Fetching 2" />
 				</ol>
 			</div>
 		</div>
